@@ -571,7 +571,7 @@ body::-webkit-scrollbar {
 
 /* ========== Reviews start ========== */
 
-.reviews {
+.review-row {
   overflow: hidden;
 }
 
