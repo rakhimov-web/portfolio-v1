@@ -20,8 +20,16 @@ requestAnimationFrame(raf);
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
-    const target = document.querySelector(this.getAttribute("href"));
-    if (target) lenis.scrollTo(target, { duration: 1.8 });
+    const href = this.getAttribute("href");
+
+    if (href === "#top") {
+      lenis.scrollTo(0, { duration: 2 });
+    } else {
+      const target = document.querySelector(href);
+      if (target) {
+        lenis.scrollTo(target, { duration: 1.8 });
+      }
+    }
   });
 });
 
