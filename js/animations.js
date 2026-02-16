@@ -100,7 +100,7 @@ if (customCursor) {
     mouseY = -50;
   let cursorX = -50,
     cursorY = -50;
-  const speed = 0.2;
+  const speed = 0.12;
 
   window.addEventListener("mousemove", (e) => {
     mouseX = e.clientX;
