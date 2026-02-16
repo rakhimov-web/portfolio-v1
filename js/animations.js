@@ -91,3 +91,41 @@ var typed = new Typed("#typing-text", {
   loop: true,
   cursorChar: "|",
 });
+
+// SMOOTH CURSOR
+const customCursor = document.querySelector(".custom-cursor");
+
+if (customCursor) {
+  let mouseX = -50,
+    mouseY = -50;
+  let cursorX = -50,
+    cursorY = -50;
+  const speed = 0.2;
+
+  window.addEventListener("mousemove", (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+
+    if (customCursor.style.opacity === "0") {
+      customCursor.style.opacity = "1";
+    }
+  });
+
+  function animate() {
+    cursorX += (mouseX - cursorX) * speed;
+    cursorY += (mouseY - cursorY) * speed;
+
+    customCursor.style.transform = `translate(${cursorX}px, ${cursorY}px)`;
+
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+
+  document.addEventListener("mouseleave", () => {
+    customCursor.style.opacity = "0";
+  });
+  document.addEventListener("mouseenter", () => {
+    customCursor.style.opacity = "1";
+  });
+}

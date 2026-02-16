@@ -748,8 +748,32 @@ textarea::placeholder {
 
 /* ========== Footer end ========== */
 
+/* Additional elements */
+
 .layout {
   opacity: 0;
+}
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 23px;
+  height: 26px;
+  z-index: 99999;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  opacity: 0;
+  will-change: transform;
+}
+
+body,
+a,
+button,
+.card,
+img,
+input,
+textarea {
+  cursor: none !important;
 }
 
 /* ========== MEDIA ========== */
