@@ -748,6 +748,10 @@ textarea::placeholder {
 
 /* ========== Footer end ========== */
 
+.layout {
+  opacity: 0;
+}
+
 /* ========== MEDIA ========== */
 
 @media (min-width: 810px) {

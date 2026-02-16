@@ -1,3 +1,7 @@
+window.addEventListener("load", () => {
+  gsap.to(".layout", { opacity: 1, duration: 0.3 });
+});
+
 // AOS animation
 gsap.registerPlugin(ScrollTrigger);
 
