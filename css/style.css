@@ -2,7 +2,7 @@
 
 /* Root */
 :root {
-  --accent-primary: #c6ff34;
+  --accent-primary: #10b981;
 
   --bg-page: #101010;
   --bg-card: #1b1b1b;
@@ -195,7 +195,7 @@ body::-webkit-scrollbar {
   transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
-  background-color: #c5ff34e5;
+  background-color: #10b981d4;
   border-radius: 50%;
   z-index: -1;
   animation: pulse-ring 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
