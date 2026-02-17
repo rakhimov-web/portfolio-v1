@@ -96,36 +96,56 @@ var typed = new Typed("#typing-text", {
 const customCursor = document.querySelector(".custom-cursor");
 
 if (customCursor) {
-  let mouseX = -50,
-    mouseY = -50;
-  let cursorX = -50,
-    cursorY = -50;
-  const speed = 0.12;
+  let mouseX = window.innerWidth / 2;
+  let mouseY = window.innerHeight / 2;
+  let cursorX = mouseX;
+  let cursorY = mouseY;
 
-  window.addEventListener("mousemove", (e) => {
+  const speed = 0.15;
+  let isMouseMoving = false;
+
+  const onMouseMove = (e) => {
     mouseX = e.clientX;
     mouseY = e.clientY;
+    isMouseMoving = true;
 
-    if (customCursor.style.opacity === "0") {
+    if (getComputedStyle(customCursor).opacity === "0") {
       customCursor.style.opacity = "1";
     }
-  });
+  };
 
-  function animate() {
+  window.addEventListener("mousemove", onMouseMove, { passive: true });
+
+  function animateCursor() {
     cursorX += (mouseX - cursorX) * speed;
     cursorY += (mouseY - cursorY) * speed;
 
-    customCursor.style.transform = `translate(${cursorX}px, ${cursorY}px)`;
+    customCursor.style.transform = `translate3d(${cursorX}px, ${cursorY}px, 0)`;
 
-    requestAnimationFrame(animate);
+    requestAnimationFrame(animateCursor);
   }
 
-  animate();
+  requestAnimationFrame(animateCursor);
 
   document.addEventListener("mouseleave", () => {
     customCursor.style.opacity = "0";
   });
-  document.addEventListener("mouseenter", () => {
+
+  document.addEventListener("mouseenter", (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
     customCursor.style.opacity = "1";
+  });
+
+  const interactiveElements = document.querySelectorAll(
+    "a, button, .project-card, .tool-card",
+  );
+  interactiveElements.forEach((el) => {
+    el.addEventListener("mouseenter", () =>
+      customCursor.classList.add("cursor-hover"),
+    );
+    el.addEventListener("mouseleave", () =>
+      customCursor.classList.remove("cursor-hover"),
+    );
   });
 }
