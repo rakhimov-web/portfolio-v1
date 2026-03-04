@@ -1,8 +1,9 @@
 window.addEventListener("load", () => {
-  gsap.to(".layout", { opacity: 1, duration: 0.3 });
+  gsap.to(".layout", { opacity: 1, duration: 0.5 });
 });
 
 // AOS animation
+
 gsap.registerPlugin(ScrollTrigger);
 
 window.addEventListener("load", () => {
@@ -19,6 +20,16 @@ window.addEventListener("load", () => {
     duration: 1,
     stagger: 0.2,
     ease: "power3.out",
+  });
+
+  gsap.from(".footer", {
+    opacity: 0,
+    y: 20,
+    duration: 1,
+    scrollTrigger: {
+      trigger: ".footer",
+      start: "top 95%",
+    },
   });
 });
 
@@ -65,7 +76,7 @@ cardConfigs.forEach((config) => {
   }
 });
 
-gsap.from(".form .top-inp > *, .form textarea, .notification, .form button", {
+gsap.from(".form .top-inp > *, .form textarea, .notification, #send-btn", {
   scrollTrigger: {
     trigger: ".form",
     start: "top 85%",
@@ -78,21 +89,23 @@ gsap.from(".form .top-inp > *, .form textarea, .notification, .form button", {
 });
 
 // Typing animation
-var typed = new Typed("#typing-text", {
-  strings: [
-    "Web Designer",
-    "Frontend Developer",
-    "UI/UX Designer",
-    "Frontend Specialist",
-  ],
-  typeSpeed: 70,
-  backSpeed: 40,
-  backDelay: 2000,
-  loop: true,
-  cursorChar: "|",
-});
+if (document.querySelector("#typing-text")) {
+  var typed = new Typed("#typing-text", {
+    strings: [
+      "Web Designer",
+      "Frontend Developer",
+      "UI/UX Designer",
+      "Frontend Specialist",
+    ],
+    typeSpeed: 70,
+    backSpeed: 40,
+    backDelay: 2000,
+    loop: true,
+    cursorChar: "|",
+  });
+}
 
-// SMOOTH CURSOR
+// Cursor design
 const customCursor = document.querySelector(".custom-cursor");
 
 if (customCursor) {
@@ -102,12 +115,10 @@ if (customCursor) {
   let cursorY = mouseY;
 
   const speed = 0.15;
-  let isMouseMoving = false;
 
   const onMouseMove = (e) => {
     mouseX = e.clientX;
     mouseY = e.clientY;
-    isMouseMoving = true;
 
     if (getComputedStyle(customCursor).opacity === "0") {
       customCursor.style.opacity = "1";
@@ -121,7 +132,6 @@ if (customCursor) {
     cursorY += (mouseY - cursorY) * speed;
 
     customCursor.style.transform = `translate3d(${cursorX}px, ${cursorY}px, 0)`;
-
     requestAnimationFrame(animateCursor);
   }
 
@@ -137,15 +147,12 @@ if (customCursor) {
     customCursor.style.opacity = "1";
   });
 
-  const interactiveElements = document.querySelectorAll(
-    "a, button, .project-card, .tool-card",
-  );
   interactiveElements.forEach((el) => {
-    el.addEventListener("mouseenter", () =>
-      customCursor.classList.add("cursor-hover"),
-    );
-    el.addEventListener("mouseleave", () =>
-      customCursor.classList.remove("cursor-hover"),
-    );
+    el.addEventListener("mouseenter", () => {
+      gsap.to(customCursor, { scale: 1.5, duration: 0.3 });
+    });
+    el.addEventListener("mouseleave", () => {
+      gsap.to(customCursor, { scale: 1, duration: 0.3 });
+    });
   });
 }

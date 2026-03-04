@@ -1,40 +1,7 @@
-/* bg effect */
 body {
   position: relative;
   overflow-x: hidden;
   margin: 0;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  top: -10%;
-  left: -10%;
-  width: 120%;
-  height: 120%;
-  z-index: -1;
-  background:
-    radial-gradient(at 0% 0%, rgba(16, 185, 129, 0.12) 0px, transparent 50%),
-    radial-gradient(
-      at 100% 100%,
-      rgba(16, 185, 129, 0.08) 0px,
-      transparent 50%
-    ),
-    radial-gradient(at 50% 50%, rgba(16, 185, 129, 0.03) 0px, transparent 50%);
-  filter: blur(80px);
-  animation: backgroundMove 15s ease-in-out infinite alternate;
-}
-
-@keyframes backgroundMove {
-  0% {
-    transform: translate(0, 0) scale(1);
-  }
-  50% {
-    transform: translate(2%, 3%) scale(1.05);
-  }
-  100% {
-    transform: translate(-1%, -2%) scale(1);
-  }
 }
 
 /* Online dot animation */

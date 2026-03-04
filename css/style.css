@@ -4,12 +4,12 @@
 :root {
   --accent-primary: #10b981;
 
-  --bg-page: #101010;
-  --bg-card: #1b1b1b;
-  --border-card: #2a2a2a;
-  --border-focus: #3a3a3a;
+  --bg-page: #121212;
+  --bg-card: #161616;
+  --border-card: #1c1c1c;
+  --border-focus: #4444;
 
-  --text-main: #f5f5f7;
+  --text-main: #f7f7f7;
   --text-muted: #a0a0a0;
 }
 
@@ -72,7 +72,7 @@ body::-webkit-scrollbar {
   margin-top: 1.5rem;
 
   /* From https://css.glass */
-  background: rgba(52, 52, 52, 0.51);
+  background: #1c1c1cb0;
   backdrop-filter: blur(13px);
   -webkit-backdrop-filter: blur(10.9px);
   border: 0.5px solid var(--bg-card);
@@ -590,7 +590,7 @@ body::-webkit-scrollbar {
   padding: 0.7rem 1rem;
   border-radius: 50%;
   background-color: var(--accent-primary);
-  color: var(--border-focus);
+  color: var(--border-card);
   transition:
     transform 0.2s,
     opacity 0.3s;
@@ -692,7 +692,7 @@ textarea::placeholder {
   padding: 1rem;
   font-size: 1.5rem;
   font-weight: 500;
-  color: var(--border-focus);
+  color: var(--border-card);
   border-radius: 1.6rem;
   border: none;
   background-color: var(--accent-primary);
@@ -901,9 +901,7 @@ textarea {
     min-width: 0;
     overflow: visible;
   }
-}
 
-@media (min-width: 1200px) {
   .main-card {
     position: sticky;
     top: 6rem;
@@ -928,9 +926,7 @@ textarea {
   .social ul {
     justify-content: center;
   }
-}
 
-@media (min-width: 1200px) {
   .header {
     position: static;
     margin-bottom: 6rem;
