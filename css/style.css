@@ -107,7 +107,7 @@ body::-webkit-scrollbar {
 }
 
 .header ul li a:hover {
-  color: var(--border-focus);
+  color: var(--border-card);
 }
 
 .header ul li a:hover::before {
