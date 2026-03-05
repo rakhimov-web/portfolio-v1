@@ -434,7 +434,7 @@ body::-webkit-scrollbar {
 .card hr {
   border: none;
   height: 1px;
-  background-color: var(--border-card);
+  background-color: var(--border-focus);
   margin-top: 1.4rem;
 }
 
@@ -717,7 +717,7 @@ textarea::placeholder {
   width: 100%;
   margin-top: 6rem;
   padding: 2rem;
-  border-top: 1px solid var(--bg-card);
+  border-top: 1px solid var(--border-focus);
   display: flex;
   align-items: center;
   justify-content: space-between;
