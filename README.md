@@ -1,27 +1,24 @@
-# Aquatechnoservice
+# Minimalist Portfolio Landing
 
-Professional platform for car wash equipment and technical maintenance services.
+A high-performance, minimalist personal portfolio designed for Senior Frontend Engineers, focusing on clean UI and developer experience.
 
 ## 📸 Preview
-![Aquatechnoservice Preview](/assets/images/screenshot.png)
+![Portfolio Preview](/assets/images/screenshot.png)
 
-## 🚀 Overview
-A high-performance landing page designed for car wash business owners, featuring equipment solutions and maintenance services.
-
-## 💡 Key Features
-* **Business Solutions:** Turnkey setups for self-service, tunnel, and portal car washes.
-* **Expert Maintenance:** Professional installation and technical support.
-* **Trusted Partners:** Official partnerships with industry leaders like WashTec and Cleanol.
-* **Strategic Growth:** Optimized for 24/7 profitability and operational efficiency.
+## 🚀 Key Features
+* **Minimalist UI:** Dark-mode first approach for reduced visual fatigue and modern aesthetics.
+* **High Performance:** Optimized for fast loading times and smooth interactions.
+* **Senior Focus:** Strategic layout highlighting key metrics, years of experience, and core stack.
+* **Developer-Friendly:** Clean, modular, and maintainable component architecture.
 
 ## 🛠 Tech Stack
-* **Framework:** React.js
-* **Styling:** CSS3 (Flexbox/Grid)
-* **Assets:** Remixicon
-* **Language:** Russian (Business-centric)
+* **Framework:** React.js / Next.js
+* **Styling:** Tailwind CSS / CSS Modules
+* **Animation:** Framer Motion
+* **Deployment:** Vercel / Netlify
 
 ## 🔗 Links
-* **Live Demo/Portfolio:** [www.rakhim.uz](https://www.rakhim.uz/)
+* **GitHub:** [github.com/yourusername](https://github.com/yourusername)
 
 ---
-*Developed by Rahimov*
+*Created by Rakhimov*
