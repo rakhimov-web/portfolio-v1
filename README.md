@@ -1,15 +1,27 @@
-# My Professional Portfolio 🚀
+# Aquatechnoservice
 
-Zamonaviy, minimalistik va interaktiv shaxsiy portfolio loyihasi. Ushbu sayt veb-ishlab chiquvchilar uchun maxsus ishlab chiqilgan bo‘lib, foydalanuvchi tajribasini (UX) oshirish uchun ilg‘or animatsiyalar va silliq sahifa siljish (smooth scrolling) texnologiyalaridan foydalanadi.
+Professional platform for car wash equipment and technical maintenance services.
 
 ## 📸 Preview
-![Portfolio Preview](/assets/images/screenshot.png)
+![Aquatechnoservice Preview](/assets/images/screenshot.png)
 
-## 🚀 Key Features
-* **Smooth Navigation:** Lenis Scroll orqali amalga oshirilgan yuqori darajadagi silliq scroll tajribasi.
-* **Advanced Animations:** GSAP (GreenSock) va ScrollTrigger yordamida yaratilgan vizual effektlar.
-* **Interactive UI:** Typings animatsiyalari va dinamik kursor elementlari.
-* **Responsive Design:** Desktop, planshet va mobil qurilmalarda mukammal ishlash uchun optimallashtirilgan.
-* **Clean Code:** Semantik HTML5, modulli CSS va zamonaviy JS arxitekturasi.
+## 🚀 Overview
+A high-performance landing page designed for car wash business owners, featuring equipment solutions and maintenance services.
 
-## 🛠
+## 💡 Key Features
+* **Business Solutions:** Turnkey setups for self-service, tunnel, and portal car washes.
+* **Expert Maintenance:** Professional installation and technical support.
+* **Trusted Partners:** Official partnerships with industry leaders like WashTec and Cleanol.
+* **Strategic Growth:** Optimized for 24/7 profitability and operational efficiency.
+
+## 🛠 Tech Stack
+* **Framework:** React.js
+* **Styling:** CSS3 (Flexbox/Grid)
+* **Assets:** Remixicon
+* **Language:** Russian (Business-centric)
+
+## 🔗 Links
+* **Live Demo/Portfolio:** [www.rakhim.uz](https://www.rakhim.uz/)
+
+---
+*Developed by Rahimov*
