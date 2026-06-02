@@ -1,6 +1,6 @@
 // Configuration for Telegram Bot
-const botToken = "8239365513:AAGQY9AcMRvVGO2T7tEg1qtRX3L6990sqMI";
-const chatId = "5379497693";
+const botToken = "BOT_TOKEN";
+const chatId = "USER_ID";
 
 // Page scroll (Lenis)
 const lenis = new Lenis({
