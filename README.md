@@ -17,8 +17,5 @@ A high-performance, minimalist personal portfolio designed for Senior Frontend E
 * **Animation:** Framer Motion
 * **Deployment:** Vercel / Netlify
 
-## 🔗 Links
-* **GitHub:** [github.com/yourusername](https://github.com/yourusername)
-
 ---
 *Created by Rakhimov*
